@@ -1,0 +1,24 @@
+{
+    "name": "Easy Image Download",
+    "description": "Automatically save the file names in order",
+    "version": "1.0",
+    "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_title": "Easy Image Download",
+      "default_popup" : "html/popup.html"
+    },
+    "content_scripts": [{
+      "js": ["jquery-3.5.0.min.js","js/imdl.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }],
+    "background" : {
+      "scripts" : ["js/background.js"]
+    },
+
+    "permissions" : [
+      "contextMenus",
+      "http://*/*",
+      "https://*/*"
+    ],
+    "manifest_version": 2
+  }
